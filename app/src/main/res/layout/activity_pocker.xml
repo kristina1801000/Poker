@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PockerActivity"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:id="@+id/layPockerCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="241dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="160dp"
+        android:gravity= "center">
+
+        <ImageView
+            android:id="@+id/fristFlipCards"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:scaleType="fitStart"
+            android:visibility="visible"
+            app:srcCompat="@drawable/flip"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/secondFlipCards"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:scaleType="fitStart"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/flip"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/thirdFlipCards"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:scaleType="fitStart"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/flip"
+            tools:layout_editor_absoluteY="174dp"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/fourthFlipCards"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:scaleType="fitStart"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/flip"
+            tools:layout_editor_absoluteY="174dp"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/fiftFlipCards"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:scaleType="fitStart"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/flip"
+            tools:layout_editor_absoluteY="174dp"
+            tools:visibility="visible"
+            />
+
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCasa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CASH "
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="260dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/layButtons"/>
+
+    <Button
+        android:id="@+id/btnDeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DEAL"
+        tools:layout_editor_absoluteX="246dp"
+        tools:layout_editor_absoluteY="262dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="250dp"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/layButtons" />
+
+    <LinearLayout
+        android:id="@+id/layButtons"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity= "center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="122dp"
+        app:layout_constraintTop_toBottomOf="@+id/layPockerCards">
+
+
+        <ToggleButton
+            android:id="@+id/btnOne"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            android:tag="0" />
+
+        <ToggleButton
+            android:id="@+id/btnTwo"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            android:tag="1" />
+
+        <ToggleButton
+            android:id="@+id/btnThree"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:tag="2" />
+
+        <ToggleButton
+            android:id="@+id/btnFour"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            android:tag="3" />
+
+        <ToggleButton
+            android:id="@+id/btnFive"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            android:tag="4" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:text="POT"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layButtons" />
+
+    <TextView
+        android:id="@+id/txtBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:text="BANKA"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layButtons" />
+
+    <Button
+        android:id="@+id/btnGamble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GAMBLE"
+        tools:layout_editor_absoluteX="246dp"
+        tools:layout_editor_absoluteY="262dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="130dp"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/txtBank" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
